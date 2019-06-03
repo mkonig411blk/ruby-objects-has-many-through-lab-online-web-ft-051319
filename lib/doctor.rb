@@ -15,5 +15,16 @@ class Doctor
     new_appointment = Appointment.new(patient, self, date)
   end
   
-  def
+    def apptmentsoin 
+    Song.all.select do |song|
+      song.artist == self 
+    end
+  end
+  
+  def genres 
+    songs.map do |song|
+      song.genre
+    end
+  end
+  
 end 
